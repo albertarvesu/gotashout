@@ -153,7 +153,7 @@ app.post('/shout', checkFbSession, function(req, res, next) {
 
         // Construct a new Shout using the post data
         var shout = new Shout({
-            mood:      req.body.mood
+            mood:      req.body.mood,
             text:      req.body.text,
             location:  req.body.location  || 'Unknown Location',
             profileId: user.id,
