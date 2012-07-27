@@ -33,13 +33,12 @@ mongoose.connect(config.mongoDb);
 
 Shout = mongoose.model('Shout', new mongoose.Schema({
     mood:  String,
-    text: String
+    text: String,
     location: String,
     profileId: Number,
     name: String,
     createdDate: Date
 }));
-
 
 
 
