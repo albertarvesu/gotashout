@@ -37,6 +37,7 @@ Ext.application({
     },
 
     launch: function() {
+
         // Destroy the #appLoadingIndicator element
         Ext.fly('appLoadingIndicator').destroy();
 

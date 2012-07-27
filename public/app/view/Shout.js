@@ -35,7 +35,7 @@ Ext.define('Gotashout.view.Shout', {
                     },
                     {
                         xtype: 'textareafield',
-                        name : 'shout',
+                        name : 'text',
                         label: 'Shout',
                         placeholder: 'Tell us why'
                     },
