@@ -41,7 +41,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        Gotashout.app.facebookAppId = "327361870688267";
+        Gotashout.app.facebookAppId = "163130797156175";
         Ext.Viewport.add(Ext.create('Gotashout.view.Main'));
     },
 
