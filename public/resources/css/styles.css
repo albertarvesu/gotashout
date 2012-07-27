@@ -1,0 +1,12 @@
+#Authenticate {
+    width: 450px;
+    margin: 0pt auto;
+}
+
+.fbLogin {
+	width: 152px;
+	height: 22px;
+	background: url(../images/login.png) no-repeat;
+	display: block;
+	margin: 15px 0;
+}
