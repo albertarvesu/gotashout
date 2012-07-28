@@ -8,9 +8,9 @@ Ext.define('Gotashout.view.shout.List', {
 
         itemTpl: Ext.create('Ext.XTemplate',
             '<div class="shout">',
-                '<div class="text">{text}</div>',
-                '<div class="location">{location}</div>',
-                '<div class="time">{[this.timeAgoInWords(values.createdDate)]}</div>',
+                '<blockquote class="text">{text}</blockquote>',
+                '<span>{location}</span>',
+                '<time>{[this.timeAgoInWords(values.createdDate)]}</time>',
             '</div>',
             '<div class="picture">',
                 '<img src="https://graph.facebook.com/{profileId}/picture?type=square">',
@@ -40,8 +40,6 @@ Ext.define('Gotashout.view.shout.List', {
                     }
                 }
             }
-        ),
-
-        emptyText: 'Add some Runs, then invite your friends!'
+        )
     }
 });
