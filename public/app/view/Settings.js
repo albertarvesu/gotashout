@@ -8,6 +8,15 @@ Ext.define('Gotashout.view.Settings', {
         styleHtmlContent: true,
         cls: 'styledContent',
         scrollable: 'vertical',
-        html: "Settings"
+        items: [
+            {
+                text: 'Logout',
+                xtype: 'button'
+            },
+            {
+                text: 'Terms of Use',
+                xtype: 'button'
+            }
+        ]
     }
 });
