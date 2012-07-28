@@ -6,11 +6,10 @@ Ext.define('Gotashout.view.Settings', {
         iconCls: 'settings',
         title: 'Settings',
         scrollable: 'vertical',
+        styleHtmlContent: true,
         items: [
             {
                 xtype: 'panel',
-                styleHtmlContent: true,
-                cls: 'styledContent',
                 id: 'fbProfile'
             },
             {
@@ -18,7 +17,7 @@ Ext.define('Gotashout.view.Settings', {
             },
             {
                 text: 'Logout',
-                id: 'logout'
+                id: 'logout',
                 xtype: 'button'
             },
             {
@@ -26,10 +25,12 @@ Ext.define('Gotashout.view.Settings', {
             },
             {
                 text: 'Terms of Service',
+                id: 'terms',
                 xtype: 'button'
             },
             {
                 text: 'Privacy Policy',
+                id: 'Privacy',
                 xtype: 'button'
             },
         ]
