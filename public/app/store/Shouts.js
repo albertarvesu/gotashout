@@ -7,7 +7,7 @@ Ext.define('Gotashout.store.Shouts', {
 
         proxy: {
             type: 'jsonp',
-            url: '/runs'
+            url: '/shouts'
         }
     }
 });
