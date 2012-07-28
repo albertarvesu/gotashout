@@ -40,8 +40,20 @@ Ext.define('Gotashout.view.Feed', {
 
     initialize: function initialize() {
         this.callParent();
+
+        var shoutList = Ext.getCmp('shoutList')
+        var me = this;
+        
         Ext.getStore('Shouts').on('load', function() {
             console.log("initialize", store, store.getCount());
+
+            if (!shoutList) {
+                shoutList = Ext.create('Gotashout.view.shout.List', {
+                    id: 'shoutList'
+                });
+            }
+
+            me.setActiveItem(shoutList);
         });
     }
 });
