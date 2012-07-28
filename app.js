@@ -137,6 +137,48 @@ function checkFbSession(req, res, next) {
 
 
 /**
+ * Return a list of shout for the user and all the user's friends
+ */
+app.get('/shouts', checkFbSession, function(req, res) {
+
+    console.log("Getting list of friends for " + req.session.fb.user_id + "...");
+
+    // Get the list of friends for the logged in user
+    graph.get("/me/friends", function(err, friends) {
+
+        if (err) {
+            handleError('Could not retrieve list of friends', friends, req, res);
+            return;
+        }
+
+        console.log("Found " + friends.data.length + " friends. Searching for shouts...");
+
+        // Create an array of friend IDs
+        var friendIds = _.map(friends.data, function(f) {
+            return f.id;
+        });
+
+        // Add the users ID to the list
+        friendIds.push(req.session.fb.user_id);
+
+        // Search for all shouts in the database with a profile ID in the friendIds array
+        Run.where('profileId').in(friendIds).sort('date', -1).run(function(err, shouts) {
+
+            if (err) {
+                handleError('Could not retrieve list of shouts', shouts, req, res);
+                return;
+            }
+
+            console.log("Found " + shouts.length + " shouts.");
+
+            // Send the list of shouts back to the client
+            res.json(shouts);
+        });
+    });
+});
+
+
+/**
  * Add a new Shout to the database
  */
 app.post('/shout', checkFbSession, function(req, res, next) {
