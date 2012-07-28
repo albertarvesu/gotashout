@@ -10,8 +10,8 @@ Ext.application({
     ],
 
     controllers: [
-        'Shouts',
-        'Facebook'
+        'Facebook',
+        'Shouts'
     ],
 
     views: [
