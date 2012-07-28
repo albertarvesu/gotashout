@@ -11,6 +11,9 @@ Ext.define('Gotashout.controller.Shouts', {
             },
             '#cancelShoutBtn': {
                 tap: 'cancelShout'
+            },
+            '#location': {
+                tap: 'locationTap'
             }
         }
     },
@@ -71,6 +74,11 @@ Ext.define('Gotashout.controller.Shouts', {
         Ext.getCmp('runForm').hide();
     },
 */
+
+    locationTap: function() {
+        console.log(locationTap);
+    },
+
     cancelShout: function() {
         //Ext.getCmp('shoutForm').reset();
         Ext.getCmp('home').setActiveItem(0);
