@@ -78,13 +78,9 @@ Ext.define('Gotashout.controller.Shouts', {
             location = Ext.getCmp('locationField').getValue(),
             caption = Gotashout.userData.first_name + ' ran ' + distance + ' miles';
 
-        if (location) {
-            caption += ' in ' + location;
-        }
-
-        Ext.getCmp('runForm').setMasked({
+        Ext.getCmp('shoutForm').setMasked({
             xtype: 'loadmask',
-            message: 'Adding New Jog...'
+            message: 'Adding New Shout...'
         });
 
         Ext.Ajax.request({

@@ -1,18 +1,17 @@
-Ext.define('Gotashout.view.Shout', {
+Ext.define('Gotashout.view.Form', {
     extend: 'Ext.Panel',
     xtype: 'shoutcard',
 
     config: {
         iconCls: 'compose',
-
-        title: 'Shout',
+        title: 'Post',
         styleHtmlContent: true,
         cls: 'styledContent',
         scrollable: 'vertical',
         items: [
             {
                 xtype: 'fieldset',
-                id: 'shoutform',
+                id: 'shoutForm',
                 items: [
                     {
                         xtype: 'selectfield',
@@ -67,7 +66,7 @@ Ext.define('Gotashout.view.Shout', {
                     {
                         text: 'Cancel',
                         xtype: 'button',
-                        ui: 'decline'
+                        ui: 'decline',
                         id: 'cancelShoutBtn'
                     }
                 ]

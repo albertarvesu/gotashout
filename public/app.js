@@ -20,7 +20,7 @@ Ext.application({
         'Home',
  
         'Feed',
-        'Shout',
+        'Form',
         'Settings'
     ],
 
