@@ -19,14 +19,14 @@ Ext.define('Gotashout.view.Settings', {
                 ].join(" ")
             },
             {
-                xtype: 'spaces'
+                xtype: 'spacer'
             },
             {
                 text: 'Logout',
                 xtype: 'button'
             },
             {
-                xtype: 'spaces'
+                xtype: 'spacer'
             },
             {
                 text: 'Terms of Service',
