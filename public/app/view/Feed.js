@@ -18,7 +18,7 @@ Ext.define('Gotashout.view.Feed', {
                 xtype: 'toolbar',
                 id: 'mainToolbar',
                 cls: 'jogToolbar',
-                title: 'Got A Shout!'
+                title: 'Got A Shout!',
                 items: [
                     {   xtype: 'spacer'   },
                     {
