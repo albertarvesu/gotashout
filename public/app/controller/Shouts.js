@@ -36,9 +36,15 @@ Ext.define('Gotashout.controller.Shouts', {
                     id: 'shoutList'
                 });
             }
-            //console.log(home,shoutList);
-            //home.setActiveItem(shoutList);
+            if(!shoutFeed) {
+                shoutFeed = Ext.create('Gotashout.view.shout.Feed', {
+                    id: 'feed'
+                });   
+            }
+
+            shoutFeed.setActiveItem(shoutFeed);
             home.setActiveItem(1);
+            
         } else {
             return;
             if (!noFriends) {

@@ -11,6 +11,29 @@ Ext.define('Gotashout.view.Feed', {
         title: 'Feeds',
         styleHtmlContent: true,
         cls: 'styledContent',
-        scrollable: 'vertical'
+        scrollable: 'vertical',
+        items: [
+            {
+                docked: 'top',
+                xtype: 'toolbar',
+                id: 'mainToolbar',
+                cls: 'jogToolbar',
+                items: [
+                    {   xtype: 'spacer'   },
+                    {
+                        xtype: 'button',
+                        cls: 'fbButton',
+                        iconCls: 'showFormBtn',
+                        id: 'showFormButton'
+                    },
+                    {
+                        xtype: 'button',
+                        cls: 'fbButton',
+                        iconCls: 'signoutBtn',
+                        id: 'signout'
+                    }
+                ]
+            }
+        ]
     }
 });
