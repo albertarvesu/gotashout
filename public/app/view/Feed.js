@@ -22,7 +22,6 @@ Ext.define('Gotashout.view.Feed', {
         var me = this;
         
         Ext.getStore('Shouts').on('load', function(store) {
-            console.log("initialize", store, store.getCount());
 
             if (!shoutList) {
                 shoutList = Ext.create('Gotashout.view.shout.List', {

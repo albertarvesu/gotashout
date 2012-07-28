@@ -17,10 +17,6 @@ Ext.define('Gotashout.view.Home', {
         },
         items: [
             {
-                xtype: 'toolbar',
-                title: 'Got A Shout!',
-            },
-            {
                 xtype: 'feedcard'
             },
             {
