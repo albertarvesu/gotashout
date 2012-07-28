@@ -76,9 +76,5 @@ Ext.define('Gotashout.view.Form', {
                 ]
             }
         ]
-    },
-
-    initialize: function initialize() {
-        console.log("form init", Ext.getCmp('location'));
     }
 });
