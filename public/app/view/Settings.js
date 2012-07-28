@@ -18,6 +18,7 @@ Ext.define('Gotashout.view.Settings', {
             },
             {
                 text: 'Logout',
+                id: 'logout'
                 xtype: 'button'
             },
             {
@@ -40,7 +41,7 @@ Ext.define('Gotashout.view.Settings', {
             .setHtml([ 
                 '<div class="fbUser">',
                 '<img src="https://graph.facebook.com/'+ Gotashout.fbUser.id +'/picture?type=square" />',
-                '<div class="name"><span>'+ Gotashout.fbUser.name +'</span><span>via Facebook</span></div>',
+                '<div><span class="name">'+ Gotashout.fbUser.name +'</span><span class="via"> via Facebook</span></div>',
                 '</div>'
             ].join(" "));
     }
