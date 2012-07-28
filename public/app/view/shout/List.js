@@ -39,14 +39,7 @@ Ext.define('Gotashout.view.shout.List', {
                 }
             }
         ),
-        plugins: [
-            {
-                type: 'listpaging'
-            },
-            {
-                type: 'pullrefresh'
-            }
-        ],
+
         emptyText: 'Add some Runs, then invite your friends!'
     }
 });
