@@ -26,12 +26,12 @@ Ext.define('Gotashout.controller.Shouts', {
     onShoutsLoad: function(store) {
 
         var home = Ext.getCmp('home'),
-            runList = Ext.getCmp('shoutList')/*,
+            shoutList = Ext.getCmp('shoutList')/*,
             noFriends = Ext.getCmp('noFriends')*/;
         console.log("getCount()", store.getCount());
         if (store.getCount()) {
-            if (!runList) {
-                runList = Ext.create('Gotashout.view.run.List', {
+            if (!shoutList) {
+                shoutList = Ext.create('Gotashout.view.run.List', {
                     id: 'shoutList'
                 });
             }
