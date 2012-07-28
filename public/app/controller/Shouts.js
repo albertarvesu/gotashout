@@ -10,7 +10,7 @@ Ext.define('Gotashout.controller.Shouts', {
                 tap: 'addShout'
             },
             '#cancelShoutBtn': {
-                tap: 'showForm'
+                tap: 'cancelShout'
             }
         }
     },
@@ -56,7 +56,7 @@ Ext.define('Gotashout.controller.Shouts', {
             home.setActiveItem(noFriends);
         }
     },
-*/
+
     showForm: function() {
         if (!this.addShoutForm) {
             this.addShoutForm = Ext.create('Gotashout.view.Form', {
@@ -69,6 +69,11 @@ Ext.define('Gotashout.controller.Shouts', {
     hideForm: function() {
         Ext.Viewport.setActiveItem(Ext.getCmp('main'));
         Ext.getCmp('runForm').hide();
+    },
+*/
+    cancelShout: function() {
+        Ext.getCmp('shoutForm').reset();
+        Ext.getCmp('home').setActiveItem(0);
     },
 
     addShout: function() {
