@@ -17,7 +17,10 @@ Ext.define('Gotashout.view.Feed', {
 
     initialize: function initialize() {
         this.callParent();
-        Ext.getStore('Shouts').on('load', this.onShoutsLoad);
+        var me = this;
+        Ext.getStore('Shouts').on('load', function() {
+            me.onShoutsLoad();
+        });
     },
 
     onShoutsLoad: function onShoutsLoad() {
@@ -28,7 +31,6 @@ Ext.define('Gotashout.view.Feed', {
                 id: 'shoutList'
             });
         }
-        console.log(this);
         this.setActiveItem(shoutList);
     }
 
