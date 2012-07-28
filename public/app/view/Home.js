@@ -16,9 +16,9 @@ Ext.define('Gotashout.view.Home', {
             }
         },
         items: [
-            {
+            /*{
                 xtype: 'feedcard'
-            },
+            },*/
             {
                 xtype: 'shoutcard'
             },
