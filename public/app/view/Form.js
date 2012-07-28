@@ -44,10 +44,10 @@ Ext.define('Gotashout.view.Form', {
                         name : 'location',
                         id : 'location',
                         label: 'Where?'
-                    },
+                    }/*,
                     {
                         xtype: 'gmap'
-                    }
+                    }*/
                 ]
             },
             {
@@ -76,5 +76,9 @@ Ext.define('Gotashout.view.Form', {
                 ]
             }
         ]
+    },
+
+    initialize: function initialize() {
+        console.log("form init", Ext.getCpm('location'));
     }
 });
