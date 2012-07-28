@@ -25,7 +25,7 @@ Ext.define('Gotashout.controller.Shouts', {
 
     onShoutsLoad: function(store) {
 
-        var home = Ext.getCmp('Home'),
+        var home = Ext.getCmp('Feed'),
             shoutList = Ext.getCmp('ShoutList')/*,
             noFriends = Ext.getCmp('noFriends')*/;
 

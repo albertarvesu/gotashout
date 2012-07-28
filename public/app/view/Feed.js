@@ -7,6 +7,7 @@ Ext.define('Gotashout.view.Feed', {
     ],
 
     config: {
+        id: "Feed",
         iconCls: 'team',
         title: 'Feeds',
         styleHtmlContent: true,
