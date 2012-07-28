@@ -9,6 +9,7 @@ Ext.define('Gotashout.view.Feed', {
     config: {
         iconCls: 'team',
         title: 'Feeds',
+        layout: card,
         //styleHtmlContent: true,
         //cls: 'styledContent',
         //scrollable: 'vertical',
@@ -41,7 +42,7 @@ Ext.define('Gotashout.view.Feed', {
     initialize: function initialize() {
         this.callParent();
 
-        var shoutList = Ext.getCmp('shoutList')
+        var shoutList = Ext.getCmp('shoutList');
         var me = this;
         
         Ext.getStore('Shouts').on('load', function(store) {
