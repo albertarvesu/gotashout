@@ -2,8 +2,8 @@ Ext.define("Gotashout.view.GMap", {
     extend: "Ext.Map",
     xtype: 'gmap',
     config: {
-        height: '100%',
-        width: '100%',
+        height: 400,
+        width: 400,
         useCurrentLocation: true,
         listeners: {
             maprender : function(comp, map){
