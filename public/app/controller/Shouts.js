@@ -72,23 +72,23 @@ Ext.define('Gotashout.controller.Shouts', {
     },
 
     addShout: function() {
-        console.log("about to add a shout");
-        return;
-        var distance = Ext.getCmp('distanceField').getValue(),
-            location = Ext.getCmp('locationField').getValue(),
-            caption = Gotashout.userData.first_name + ' ran ' + distance + ' miles';
+
+        var mood = Ext.getCmp('mood').getValue(),
+                    text = Ext.getCmp('text').getValue(),
+                    location = Ext.getCmp('location').getValue();
 
         Ext.getCmp('shoutForm').setMasked({
             xtype: 'loadmask',
-            message: 'Adding New Shout...'
+            message: 'Shouting out...'
         });
 
         Ext.Ajax.request({
-            url: '/run',
+            url: '/shout',
             method: 'POST',
             params: {
-                location: location,
-                distance: distance
+                mood: mood,
+                text: text,
+                location: location
             },
             callback: this.onAddShout,
             scope: this
@@ -96,8 +96,7 @@ Ext.define('Gotashout.controller.Shouts', {
     },
 
     onAddShout: function(options, success, response) {
-        Ext.getCmp('runForm').setMasked(false);
-        this.hideForm();
+        Ext.getCmp('shoutForm').setMasked(false);
         Ext.getStore('Shouts').load();
     }
 });

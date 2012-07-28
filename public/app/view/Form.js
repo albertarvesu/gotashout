@@ -16,7 +16,8 @@ Ext.define('Gotashout.view.Form', {
                     {
                         xtype: 'selectfield',
                         name : 'mood',
-                        label: 'Mood',
+                        id : 'mood',
+                        label: 'How are you feeling?',
                         options: [
                             {
                                 text : 'Happy',
@@ -35,14 +36,14 @@ Ext.define('Gotashout.view.Form', {
                     {
                         xtype: 'textareafield',
                         name : 'text',
-                        label: 'Shout',
-                        placeholder: 'Tell us why'
+                        id : 'text',
+                        label: 'Tell us why'
                     },
                     {
                         xtype: 'textfield',
                         name : 'location',
-                        label: 'Location',
-                        placeholder: 'Where are you?'
+                        id : 'location',
+                        label: 'Here in'
                     }
                 ]
             },

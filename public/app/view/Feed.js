@@ -32,6 +32,7 @@ Ext.define('Gotashout.view.Feed', {
             });
         }
         this.setActiveItem(shoutList);
+        Ext.getCmp('home').setActiveItem(0);
     }
 
 });
