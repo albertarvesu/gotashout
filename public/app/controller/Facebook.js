@@ -74,7 +74,6 @@ Ext.define('Gotashout.controller.Facebook', {
 
             Ext.Viewport.setMasked(false);
 
-
             if (response.status == 'connected') {
                 me.onLogin();
             } else {
@@ -117,7 +116,6 @@ Ext.define('Gotashout.controller.Facebook', {
 
                 errTitle = "Facebook " + response.error.type + " error";
 
-                return;
                 Ext.Msg.alert(errTitle, response.error.message, function() {
                     me.login();
                 });

@@ -12,7 +12,7 @@ Ext.define('Gotashout.view.shout.List', {
                 '<div class="mood">{name} is {mood}</div>',
                 '<div class="text">{text}</div>',
                 '<div class="location">{location}</div>',
-                '<div class="time">{[this.timeAgoInWords(values.date)]}</div>',
+                '<div class="time">{[this.timeAgoInWords(createdDate)]}</div>',
             '</div>',
             {
                 timeAgoInWords: function(date) {
