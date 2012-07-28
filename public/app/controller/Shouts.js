@@ -44,7 +44,7 @@ Ext.define('Gotashout.controller.Shouts', {
                 });   
             }
 
-            feed.setActiveItem(shoutList);
+            home.setActiveItem(shoutList);
             
 
         } else {
