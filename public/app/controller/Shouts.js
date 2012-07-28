@@ -76,7 +76,7 @@ Ext.define('Gotashout.controller.Shouts', {
 */
 
     locationTap: function() {
-        console.log(locationTap);
+        console.log('locationTap');
     },
 
     cancelShout: function() {
