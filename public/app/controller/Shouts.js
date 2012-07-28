@@ -26,6 +26,7 @@ Ext.define('Gotashout.controller.Shouts', {
     onShoutsLoad: function(store) {
 
         var home = Ext.getCmp('home'),
+            feed = Ext.getCmp('feed'),
             shoutList = Ext.getCmp('shoutList')/*,
             noFriends = Ext.getCmp('noFriends')*/;
 
@@ -36,13 +37,16 @@ Ext.define('Gotashout.controller.Shouts', {
                     id: 'shoutList'
                 });
             }
-            if(!shoutFeed) {
-                shoutFeed = Ext.create('Gotashout.view.shout.Feed', {
+
+            if(!feed) {
+                feed = Ext.create('Gotashout.view.Feed', {
                     id: 'feed'
                 });   
             }
-            console.log(shoutFeed, shoutList);
-            shoutFeed.setActiveItem(shoutList);
+
+            console.log(feed, shoutList);
+
+            feed.setActiveItem(shoutList);
             home.setActiveItem(1);
 
         } else {
