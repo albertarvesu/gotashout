@@ -28,7 +28,7 @@ Ext.define('Gotashout.view.Feed', {
                     id: 'shoutList'
                 });
             }
-            console.log(me, shoutList);
+
             me.setActiveItem(shoutList);
         });
     }
