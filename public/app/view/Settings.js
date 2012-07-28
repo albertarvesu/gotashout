@@ -11,12 +11,7 @@ Ext.define('Gotashout.view.Settings', {
                 xtype: 'panel',
                 styleHtmlContent: true,
                 cls: 'styledContent',
-                html: [ 
-                    '<div class="fbProfile">',
-                    '<img src="https://graph.facebook.com/'+ Gotashout.fbUser.id +'/picture?type=square" />',
-                    '<div class="name"><span>'+ Gotashout.fbUser.name +'</span><span>via Facebook</span></div>',
-                    '</div>'
-                ].join(" ")
+                id: 'fbProfile'
             },
             {
                 xtype: 'spacer'
@@ -37,5 +32,16 @@ Ext.define('Gotashout.view.Settings', {
                 xtype: 'button'
             },
         ]
+    },
+
+    initialize: function initialize() {
+        this
+            .down("#fbProfile")
+            .setHtml([ 
+                '<div class="fbUser">',
+                '<img src="https://graph.facebook.com/'+ Gotashout.fbUser.id +'/picture?type=square" />',
+                '<div class="name"><span>'+ Gotashout.fbUser.name +'</span><span>via Facebook</span></div>',
+                '</div>'
+            ].join(" "));
     }
 });
