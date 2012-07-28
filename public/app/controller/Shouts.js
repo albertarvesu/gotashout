@@ -20,32 +20,31 @@ Ext.define('Gotashout.controller.Shouts', {
 
     init: function() {
         this.callParent();
-        console.log("init", Ext.getStore('Shouts'), this.onShoutsLoad);
         Ext.getStore('Shouts').on('load', this.onShoutsLoad);
     },
 
     onShoutsLoad: function(store) {
-        console.log("store", store);
-        return;
-        var main = Ext.getCmp('main'),
-            runList = Ext.getCmp('runList'),
-            noFriends = Ext.getCmp('noFriends');
 
+        var home = Ext.getCmp('home'),
+            runList = Ext.getCmp('shoutList')/*,
+            noFriends = Ext.getCmp('noFriends')*/;
+        console.log("getCount()", store.getCount());
         if (store.getCount()) {
             if (!runList) {
                 runList = Ext.create('Gotashout.view.run.List', {
-                    id: 'runList'
+                    id: 'shoutList'
                 });
             }
-            main.setActiveItem(runList);
+            home.setActiveItem(shoutList);
         } else {
+            return;
             if (!noFriends) {
                 noFriends = Ext.create('Gotashout.view.NoFriends', {
                     id: 'noFriends',
                     data: Gotashout.userData
                 });
             }
-            main.setActiveItem(noFriends);
+            home.setActiveItem(noFriends);
         }
     },
 
