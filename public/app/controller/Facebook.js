@@ -139,7 +139,12 @@ Ext.define('Gotashout.controller.Facebook', {
 
             } else {
                 Gotashout.fbUser = response;
-                Ext.Viewport.setActiveItem(Ext.create('Gotashout.view.Home'));
+                if (!me.home) {
+                    me.home = Ext.create('Gotashout.view.Home', {
+                        id: 'home'
+                    });
+                }
+                Ext.Viewport.setActiveItem(me.home);
                 Ext.getStore('Shouts').load();
             }
         });

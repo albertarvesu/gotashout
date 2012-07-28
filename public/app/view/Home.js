@@ -4,12 +4,10 @@ Ext.define('Gotashout.view.Home', {
     requires: [
         'Gotashout.view.Feed',
         'Gotashout.view.Shout',
-        'Gotashout.view.Settings',
-        'Gotashout.view.shout.List'
+        'Gotashout.view.Settings'
     ],
 
     config: {
-        id: 'Home',
         ui: 'dark',
         tabBar: {
             docked: 'bottom',

@@ -2,9 +2,9 @@ Ext.define('Gotashout.view.shout.List', {
     extend: 'Ext.List',
 
     config: {
-        id: 'ShoutList',
         store: 'Shouts',
-
+        iconCls: 'team',
+        title: 'what',
         disableSelection: true,
 
         itemTpl: Ext.create('Ext.XTemplate',

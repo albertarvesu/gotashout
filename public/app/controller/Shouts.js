@@ -25,8 +25,8 @@ Ext.define('Gotashout.controller.Shouts', {
 
     onShoutsLoad: function(store) {
 
-        var home = Ext.getCmp('Home'),
-            shoutList = Ext.getCmp('ShoutList')/*,
+        var home = Ext.getCmp('home'),
+            shoutList = Ext.getCmp('shoutList')/*,
             noFriends = Ext.getCmp('noFriends')*/;
 
 
@@ -36,8 +36,9 @@ Ext.define('Gotashout.controller.Shouts', {
                     id: 'shoutList'
                 });
             }
-            console.log(home,shoutList);
-            home.setActiveItem(shoutList);
+            //console.log(home,shoutList);
+            //home.setActiveItem(shoutList);
+            home.setActiveItem(1);
         } else {
             return;
             if (!noFriends) {
