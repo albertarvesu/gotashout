@@ -7,6 +7,7 @@ Ext.define('Gotashout.view.Settings', {
         title: 'Settings',
         scrollable: 'vertical',
         styleHtmlContent: true,
+        type: 'vbox',
         items: [
             {
                 xtype: 'panel',
