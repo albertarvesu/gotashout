@@ -17,6 +17,11 @@ Ext.define('Gotashout.view.Home', {
         },
         items: [
             {
+                docked: 'top',
+                xtype: 'titlebar',
+                title: 'Got A Shout!'
+            },
+            {
                 xtype: 'feedcard'
             },
             {
