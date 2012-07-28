@@ -36,5 +36,11 @@ Ext.define('Gotashout.view.Feed', {
                 ]
             }
         ]
+    },
+
+    initialize: function initialize() {
+        Ext.getStore('Shouts').on('load', function() {
+            console.log("initialize");
+        });
     }
 });
