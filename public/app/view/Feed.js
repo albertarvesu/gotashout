@@ -9,15 +9,16 @@ Ext.define('Gotashout.view.Feed', {
     config: {
         iconCls: 'team',
         title: 'Feeds',
-        styleHtmlContent: true,
-        cls: 'styledContent',
-        scrollable: 'vertical',
+        //styleHtmlContent: true,
+        //cls: 'styledContent',
+        //scrollable: 'vertical',
         items: [
             {
                 docked: 'top',
                 xtype: 'toolbar',
                 id: 'mainToolbar',
                 cls: 'jogToolbar',
+                title: 'Got A Shout!'
                 items: [
                     {   xtype: 'spacer'   },
                     {
