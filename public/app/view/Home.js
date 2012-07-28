@@ -17,39 +17,9 @@ Ext.define('Gotashout.view.Home', {
         },
         items: [
             {
-                xtype: 'feedcard'
-            },
-            {
-                xtype: 'shoutcard'
-            },
-            {
-                xtype: 'settingscard'
-            }
-        ]
-    }
-});
-
-
-/**
- * This screen is displayed once a user has logged in to Facebook and authorized our app.
- */
-/*
-Ext.define('Gotashout.view.Home', {
-    extend: 'Ext.Container',
-    requires: [
-        'Gotashout.view.shout.List',
-    ],
-
-    config: {
-        layout: 'card',
-
-        items: [
-            {
-                docked: 'top',
                 xtype: 'toolbar',
-                id: 'mainToolbar',
-                cls: 'jogToolbar',
-                items: [
+                title: 'Got A Shout!',
+            },
             {
                 xtype: 'feedcard'
             },
@@ -60,8 +30,5 @@ Ext.define('Gotashout.view.Home', {
                 xtype: 'settingscard'
             }
         ]
-            }
-        ]
     }
 });
-*/

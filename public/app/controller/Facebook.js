@@ -139,7 +139,7 @@ Ext.define('Gotashout.controller.Facebook', {
 
             } else {
                 Gotashout.fbUser = response;
-                console.log(response);
+
                 if (!me.home) {
                     me.home = Ext.create('Gotashout.view.Home', {
                         id: 'home'
