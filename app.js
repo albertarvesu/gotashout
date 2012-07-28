@@ -162,7 +162,7 @@ app.get('/shouts', checkFbSession, function(req, res) {
         friendIds.push(req.session.fb.user_id);
 
         // Search for all shouts in the database with a profile ID in the friendIds array
-        Run.where('profileId').in(friendIds).sort('date', -1).run(function(err, shouts) {
+        Shout.where('profileId').in(friendIds).sort('date', -1).shout(function(err, shouts) {
 
             if (err) {
                 handleError('Could not retrieve list of shouts', shouts, req, res);
