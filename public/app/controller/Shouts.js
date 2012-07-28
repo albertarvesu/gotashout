@@ -31,7 +31,7 @@ Ext.define('Gotashout.controller.Shouts', {
         console.log("getCount()", store.getCount());
         if (store.getCount()) {
             if (!shoutList) {
-                shoutList = Ext.create('Gotashout.view.run.List', {
+                shoutList = Ext.create('Gotashout.view.shout.List', {
                     id: 'shoutList'
                 });
             }
