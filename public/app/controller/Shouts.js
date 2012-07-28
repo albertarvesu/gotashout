@@ -40,13 +40,14 @@ Ext.define('Gotashout.controller.Shouts', {
 
             if(!feed) {
                 feed = Ext.create('Gotashout.view.Feed', {
-                    id: 'feed'
+                    id: 'feed',
+                    xtype: 'feedcard'
                 });   
             }
 
-            home.setActiveItem(shoutList);
+            feed.setActiveItem(shoutList);
+            home.add(feed);
             
-
         } else {
             return;
             if (!noFriends) {

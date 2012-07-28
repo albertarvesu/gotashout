@@ -1,5 +1,5 @@
 Ext.define('Gotashout.view.Feed', {
-    extend: 'Ext.Panel',
+    extend: 'Ext.Container',
     xtype: 'feedcard',
 
     requires: [

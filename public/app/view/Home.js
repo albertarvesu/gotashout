@@ -1,5 +1,4 @@
-
-/*Ext.define('Gotashout.view.Home', {
+Ext.define('Gotashout.view.Home', {
     extend: 'Ext.TabPanel',
     xtype: 'homeview',
     requires: [
@@ -17,9 +16,9 @@
             }
         },
         items: [
-            {
+            /*{
                 xtype: 'feedcard'
-            },
+            },*/
             {
                 xtype: 'shoutcard'
             },
@@ -29,11 +28,12 @@
         ]
     }
 });
-*/
+
 
 /**
  * This screen is displayed once a user has logged in to Facebook and authorized our app.
  */
+/*
 Ext.define('Gotashout.view.Home', {
     extend: 'Ext.Container',
     requires: [
@@ -64,3 +64,4 @@ Ext.define('Gotashout.view.Home', {
         ]
     }
 });
+*/
