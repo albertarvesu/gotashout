@@ -1,6 +1,6 @@
 Ext.define('Gotashout.view.Form', {
     extend: 'Ext.Panel',
-    xtype: 'shoutcard',
+    xtype: 'formcard',
 
     config: {
         iconCls: 'compose',

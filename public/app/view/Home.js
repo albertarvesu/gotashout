@@ -3,7 +3,7 @@ Ext.define('Gotashout.view.Home', {
     xtype: 'homeview',
     requires: [
         'Gotashout.view.Feed',
-        'Gotashout.view.Shout',
+        'Gotashout.view.Form',
         'Gotashout.view.Settings'
     ],
 
@@ -25,7 +25,7 @@ Ext.define('Gotashout.view.Home', {
                 xtype: 'feedcard'
             },
             {
-                xtype: 'shoutcard'
+                xtype: 'formcard'
             },
             {
                 xtype: 'settingscard'
