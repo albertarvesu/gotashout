@@ -7,8 +7,9 @@ Ext.define('Gotashout.view.shout.List', {
         disableSelection: true,
 
         itemTpl: Ext.create('Ext.XTemplate',
-            '<div class="run">',
+            '<div class="shout">',
                 '<img src="https://graph.facebook.com/{profileId}/picture?type=square" />',
+                '<div class="text">{text}</div>',
                 '<div class="location">{location}</div>',
                 '<div class="time">{[this.timeAgoInWords(values.date)]}</div>',
             '</div>',
