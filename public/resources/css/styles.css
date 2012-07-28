@@ -11,6 +11,15 @@
 	margin: 15px 0;
 }
 
+.x-list-container {
+	text-align: center;
+}
+
+.x-list-item-label {
+	border: none !important;
+	text-align: center;
+}
+
 .shout {
 	position: relative;
 	width: 270px;
