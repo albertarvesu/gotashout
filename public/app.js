@@ -5,9 +5,14 @@ Ext.application({
         'Ext.MessageBox'
     ],
 
+    models: [
+        'Shout'
+    ],
+
     controllers: [
         'Facebook'
     ],
+
     views: [
         'Main',
  
@@ -16,6 +21,10 @@ Ext.application({
         'Feed',
         'Shout',
         'Settings'
+    ],
+
+    stores: [
+        'Shouts'
     ],
 
     icon: {
