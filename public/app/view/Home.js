@@ -43,5 +43,8 @@ Ext.define('Gotashout.view.Home', {
                 meta.fireEvent('tap', meta, e);
             });
         }
+
+        var geo = Ext.create('Ext.util.Geolocation');
+        console.log(geo);
     }
 });
