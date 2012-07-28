@@ -15,6 +15,7 @@ Ext.application({
     ],
 
     views: [
+        'GMap',
         'Main',
  
         'Home',

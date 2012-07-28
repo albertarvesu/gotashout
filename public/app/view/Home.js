@@ -44,7 +44,5 @@ Ext.define('Gotashout.view.Home', {
             });
         }
 
-        var geo = Ext.create('Ext.util.Geolocation');
-        console.log(geo);
     }
 });

@@ -46,11 +46,7 @@ Ext.define('Gotashout.view.Form', {
                         label: 'Where?'
                     },
                     {
-                        xtype: 'map',
-                        useCurrentLocation: true,
-                        id: 'map',
-                        height: 400,
-                        width: 400
+                        xtype: 'gmap'
                     }
                 ]
             },
