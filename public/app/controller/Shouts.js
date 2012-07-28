@@ -72,7 +72,7 @@ Ext.define('Gotashout.controller.Shouts', {
     },
 */
     cancelShout: function() {
-        Ext.getCmp('shoutForm').reset();
+        //Ext.getCmp('shoutForm').reset();
         Ext.getCmp('home').setActiveItem(0);
     },
 
