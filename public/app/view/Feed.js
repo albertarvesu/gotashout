@@ -44,7 +44,7 @@ Ext.define('Gotashout.view.Feed', {
         var shoutList = Ext.getCmp('shoutList')
         var me = this;
         
-        Ext.getStore('Shouts').on('load', function() {
+        Ext.getStore('Shouts').on('load', function(store) {
             console.log("initialize", store, store.getCount());
 
             if (!shoutList) {
