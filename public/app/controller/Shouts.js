@@ -22,13 +22,13 @@ Ext.define('Gotashout.controller.Shouts', {
         this.callParent();
         //Ext.getStore('Shouts').on('load', this.onShoutsLoad);
     },
-
+/*
     onShoutsLoad: function(store) {
 
         var home = Ext.getCmp('home'),
             feed = Ext.getCmp('feed'),
-            shoutList = Ext.getCmp('shoutList')/*,
-            noFriends = Ext.getCmp('noFriends')*/;
+            shoutList = Ext.getCmp('shoutList'),
+            noFriends = Ext.getCmp('noFriends');
 
 
         if (store.getCount()) {
@@ -59,7 +59,7 @@ Ext.define('Gotashout.controller.Shouts', {
             home.setActiveItem(noFriends);
         }
     },
-
+*/
     showForm: function() {
         if (!this.addShoutForm) {
             this.addShoutForm = Ext.create('Gotashout.view.Form', {
