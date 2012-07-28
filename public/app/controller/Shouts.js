@@ -20,6 +20,7 @@ Ext.define('Gotashout.controller.Shouts', {
 
     init: function() {
         this.callParent();
+        console.log("init", Ext.getStore('Shouts'), this.onShoutsLoad);
         Ext.getStore('Shouts').on('load', this.onShoutsLoad);
     },
 
