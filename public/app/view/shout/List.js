@@ -5,7 +5,7 @@ Ext.define('Gotashout.view.shout.List', {
         store: 'Shouts',
 
         disableSelection: true,
-        itemCls: 'shoutItem',
+
         itemTpl: Ext.create('Ext.XTemplate',
             '<div class="shout">',
                 '<div class="text">{text}</div>',
@@ -15,8 +15,7 @@ Ext.define('Gotashout.view.shout.List', {
             '<div class="picture">',
                 '<img src="https://graph.facebook.com/{profileId}/picture?type=square">',
                 '<span class="mood">{name} is {mood}</span>',
-            '</div>'
-
+            '</div>',
             {
                 timeAgoInWords: function(date) {
                     try {
