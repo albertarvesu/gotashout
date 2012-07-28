@@ -1,5 +1,5 @@
 
-Ext.define('Gotashout.model.shout', {
+Ext.define('Gotashout.model.Shout', {
     extend: 'Ext.data.Model',
 
     config: {
