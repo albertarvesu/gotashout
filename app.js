@@ -198,8 +198,8 @@ app.post('/shout', checkFbSession, function(req, res, next) {
             mood:      req.body.mood,
             text:      req.body.text,
             location:  req.body.location  || 'Unknown Location',
-            profileId: "699408097", //user.id,
-            name:      "Zerlan Siasat", //user.first_name + ' ' + user.last_name,
+            profileId: user.id,
+            name:      user.first_name + ' ' + user.last_name,
             createdDate: new Date()
         });
 
