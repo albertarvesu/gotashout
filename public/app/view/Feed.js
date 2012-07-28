@@ -39,8 +39,9 @@ Ext.define('Gotashout.view.Feed', {
     },
 
     initialize: function initialize() {
+        this.callParent();
         Ext.getStore('Shouts').on('load', function() {
-            console.log("initialize");
+            console.log("initialize", store, store.getCount());
         });
     }
 });
