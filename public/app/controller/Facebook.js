@@ -138,9 +138,9 @@ Ext.define('Gotashout.controller.Facebook', {
                 });
 
             } else {
-
                 Gotashout.fbUser = response;
                 Ext.Viewport.setActiveItem(Ext.create('Gotashout.view.Home'));
+                Ext.getStore('Shouts').load();
             }
         });
     },
