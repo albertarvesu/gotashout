@@ -17,19 +17,19 @@ Ext.define('Gotashout.view.Feed', {
 
     initialize: function initialize() {
         this.callParent();
+        Ext.getStore('Shouts').on('load', this.onShoutsLoad);
+    },
 
+    onShoutsLoad: function onShoutsLoad() {
         var shoutList = Ext.getCmp('shoutList');
-        var me = this;
-        
-        Ext.getStore('Shouts').on('load', function(store) {
 
-            if (!shoutList) {
-                shoutList = Ext.create('Gotashout.view.shout.List', {
-                    id: 'shoutList'
-                });
-            }
+        if (!shoutList) {
+            shoutList = Ext.create('Gotashout.view.shout.List', {
+                id: 'shoutList'
+            });
+        }
 
-            me.setActiveItem(shoutList);
-        });
+        this.setActiveItem(shoutList);
     }
+
 });

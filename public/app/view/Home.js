@@ -31,5 +31,17 @@ Ext.define('Gotashout.view.Home', {
                 xtype: 'settingscard'
             }
         ]
+    },
+
+    initialize: function() {
+        this.callParent();
+
+        // Enable the Tap event on the profile picture in the toolbar, so we can show a logout button
+        var meta = Ext.getCmp('signout');
+        if (meta) {
+            meta.element.on('tap', function(e) {
+                meta.fireEvent('tap', meta, e);
+            });
+        }
     }
 });

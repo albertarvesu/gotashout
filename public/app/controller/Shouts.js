@@ -6,14 +6,11 @@ Ext.define('Gotashout.controller.Shouts', {
 
     config: {
         control: {
-            '#addShoutButton': {
+            '#addShoutBtn': {
                 tap: 'addShout'
             },
-            '#showFormButton': {
+            '#cancelShoutBtn': {
                 tap: 'showForm'
-            },
-            '#addShoutBackBtn': {
-                tap: 'hideForm'
             }
         }
     },
@@ -75,7 +72,8 @@ Ext.define('Gotashout.controller.Shouts', {
     },
 
     addShout: function() {
-
+        console.log("about to add a shout");
+        return;
         var distance = Ext.getCmp('distanceField').getValue(),
             location = Ext.getCmp('locationField').getValue(),
             caption = Gotashout.userData.first_name + ' ran ' + distance + ' miles';

@@ -62,30 +62,13 @@ Ext.define('Gotashout.view.Shout', {
                         text: 'Shout',
                         xtype: 'button',
                         ui: 'action',
-                        scope: this,
-                        handler: function(btn){
-                            /*
-                            var form = Ext.getCmp('shoutform');
-
-                            if (btn.hasDisabled) {
-                                form.enable();
-                                btn.hasDisabled = false;
-                                btn.setText('Disable fields');
-                            } else {
-                                form.disable();
-                                btn.hasDisabled = true;
-                                btn.setText('Enable fields');
-                            }
-                            */
-                        }
+                        id: 'addShoutBtn'
                     },
                     {
                         text: 'Cancel',
                         xtype: 'button',
-                        ui: 'decline',
-                        handler: function(){
-                            //Ext.getCmp('shoutform').reset();
-                        }
+                        ui: 'decline'
+                        id: 'cancelShoutBtn'
                     }
                 ]
             }
