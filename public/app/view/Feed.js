@@ -9,7 +9,7 @@ Ext.define('Gotashout.view.Feed', {
     config: {
         iconCls: 'team',
         title: 'Feeds',
-        layout: card,
+        layout: 'card',
         //styleHtmlContent: true,
         //cls: 'styledContent',
         //scrollable: 'vertical',
