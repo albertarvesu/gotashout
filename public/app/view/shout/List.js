@@ -2,6 +2,7 @@ Ext.define('Gotashout.view.shout.List', {
     extend: 'Ext.List',
 
     config: {
+        id: 'ShoutList',
         store: 'Shouts',
 
         disableSelection: true,
