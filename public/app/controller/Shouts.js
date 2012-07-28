@@ -36,6 +36,7 @@ Ext.define('Gotashout.controller.Shouts', {
                     id: 'shoutList'
                 });
             }
+            console.log(home,shoutList);
             home.setActiveItem(shoutList);
         } else {
             return;
