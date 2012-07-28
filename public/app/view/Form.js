@@ -5,8 +5,8 @@ Ext.define('Gotashout.view.Form', {
     config: {
         iconCls: 'compose',
         title: 'Post',
+        layout: 'card',
         styleHtmlContent: true,
-        cls: 'styledContent',
         scrollable: 'vertical',
         items: [
             {
@@ -43,7 +43,14 @@ Ext.define('Gotashout.view.Form', {
                         xtype: 'textfield',
                         name : 'location',
                         id : 'location',
-                        label: 'Where are you?'
+                        label: 'Where?'
+                    },
+                    {
+                        xtype: 'map',
+                        useCurrentLocation: true,
+                        id: 'map',
+                        height: 400,
+                        width: 400
                     }
                 ]
             },
