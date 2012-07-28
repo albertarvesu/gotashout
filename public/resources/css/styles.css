@@ -11,13 +11,12 @@
 	margin: 15px 0;
 }
 
-.x-list-item, .x-list-item-label {
+.x-list-item {
 	border: none !important;
-	text-align: center;
 }
 
 #shoutList {
-	background-color: none;
+	background-color: none !important;
 }
 
 .shout {
