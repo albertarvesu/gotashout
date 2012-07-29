@@ -72,10 +72,12 @@
 }
 
 .shout {
-	color: none !important;
+	color: #FFF !important;
+	font-size: 0.9em !important;
+	margin: 1em !important;
 }
 
-.picture > * {
-	display: block;
+.picture {
+	
 }
 

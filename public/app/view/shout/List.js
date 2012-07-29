@@ -8,11 +8,12 @@ Ext.define('Gotashout.view.shout.List', {
 
         itemTpl: Ext.create('Ext.XTemplate',
             '<blockquote class="shout bubble">{text}</blockquote>',
-            '<div class="picture">',
-                '<img src="https://graph.facebook.com/{profileId}/picture?type=square">',
+            '<div class="info">',
+                '<img class="picture" src="https://graph.facebook.com/{profileId}/picture?type=square">',
                 '<span class="mood {mood}">{name} is {mood}</span>',
                 '<span class="location">{location}</span>',
                 '<time>{[this.timeAgoInWords(values.createdDate)]}</time>',
+                '</div>',
             '</div>',
             {
                 timeAgoInWords: function(date) {
