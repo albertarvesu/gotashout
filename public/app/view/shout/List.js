@@ -12,8 +12,7 @@ Ext.define('Gotashout.view.shout.List', {
                 '<img class="picture" src="https://graph.facebook.com/{profileId}/picture?type=square">',
                 '<div class="info">',
                     '<span class="mood {mood}">{name} is {mood}</span>',
-                    '<span class="location">{location}</span>',
-                    '<time>{[this.timeAgoInWords(values.createdDate)]}</time>',
+                    '<span class="location"><time>{[this.timeAgoInWords(values.createdDate)]}</time> in {location}</span>',
                 '</div>',
             '</div>',
             {

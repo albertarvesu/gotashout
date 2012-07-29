@@ -90,3 +90,11 @@
 	display: block;
 }
 
+.info {
+	color: white;
+	font-size: 0.9em;
+}
+
+.location {
+	font-size: 0.8em;	
+}
