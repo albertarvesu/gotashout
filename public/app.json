@@ -60,8 +60,8 @@
      */
     "css": [
         {
-            "path": "resources/css/dark-theme.css",
-            //"path": "resources/css/app.css",
+            //"path": "resources/css/dark-theme.css",
+            "path": "resources/css/app.css",
             "update": "delta"
         },
         {
