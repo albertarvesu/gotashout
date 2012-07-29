@@ -12,7 +12,7 @@
 }
 
 
-.x-list-item, .x-item-pressed {
+.x-list-item, .x-list-item-label, .x-item-pressed {
 	border: none !important;
 	background: none !important;
 }
