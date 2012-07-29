@@ -77,7 +77,16 @@
 	margin: 1em !important;
 }
 
-.picture {
-	
+.details {
+	width: 100%;
+	overflow: auto;
+}
+
+.picture, .info {
+	float: left;
+}
+
+.info > * {
+	display: block;
 }
 
