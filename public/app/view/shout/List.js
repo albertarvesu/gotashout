@@ -7,14 +7,12 @@ Ext.define('Gotashout.view.shout.List', {
         disableSelection: true,
 
         itemTpl: Ext.create('Ext.XTemplate',
-            '<div class="shout">',
-                '<blockquote class="text">{text}</blockquote>',
-                '<span>{location}</span>',
-                '<time>{[this.timeAgoInWords(values.createdDate)]}</time>',
-            '</div>',
+            '<blockquote class="shout bubble">{text}</blockquote>',
             '<div class="picture">',
                 '<img src="https://graph.facebook.com/{profileId}/picture?type=square">',
-                '<span class="mood">{name} is {mood}</span>',
+                '<span class="mood {mood}">{name} is {mood}</span>',
+                '<span class="location">{location}</span>',
+                '<time>{[this.timeAgoInWords(values.createdDate)]}</time>',
             '</div>',
             {
                 timeAgoInWords: function(date) {

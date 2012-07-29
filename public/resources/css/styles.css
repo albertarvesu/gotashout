@@ -20,7 +20,7 @@
 	background: none !important;
 }
 
-.shout {
+.bubble {
 	position: relative;
 	width: 270px;
 	padding: 50px 40px;
@@ -44,7 +44,7 @@
 
 }
 
-.shout::before {
+.bubble::before {
 	content: "";
 	position: absolute;
 	bottom: -20px;
@@ -58,7 +58,7 @@
 }
 
 
-.shout::after {
+.bubble::after {
 	content: "";
 	position: absolute;
 	bottom: -30px;
@@ -70,3 +70,12 @@
 	-moz-border-radius: 15px;
 	border-radius: 15px; 
 }
+
+.shout {
+	color: none !important;
+}
+
+.picture > * {
+	display: block;
+}
+
