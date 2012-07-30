@@ -10,7 +10,7 @@ Ext.define('Gotashout.view.Home', {
     config: {
         ui: 'dark',
         tabBar: {
-            docked: 'bottom',
+            docked: 'top',
             layout: {
                 pack: 'center'
             }
