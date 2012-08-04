@@ -82,7 +82,7 @@ Ext.define('Gotashout.controller.Facebook', {
             }
         });
 
-
+        return;
         me.fbLoginTimeout = setTimeout(function() {
 
             Ext.Viewport.setMasked(false);

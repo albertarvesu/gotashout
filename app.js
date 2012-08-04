@@ -1,6 +1,7 @@
 var graph = require('fbgraph'),
     _ = require('underscore'),
     crypto = require('crypto'),
+    request = require('request'),
     express = require('express'),
     connect = require('connect'),
     MongoStore = require('connect-mongo'),
@@ -21,7 +22,9 @@ var config = {
     mongoDb:       'mongodb://albertarvesu:bertneng@ds035897.mongolab.com:35897/gotashout',
     
     // Session encyption key
-    sessionSecret: 'oasjdf0asduf0asd9f0adfks'
+    sessionSecret: 'oasjdf0asduf0asd9f0adfks',
+
+    googleApiKey: 'AIzaSyAqoyHOKaq-K0gA07RFIUR7bgLKM2k2Bb4'
 };
 
 
@@ -215,4 +218,10 @@ app.post('/shout', checkFbSession, function(req, res, next) {
             res.json({ success: true });
         });
     });
+});
+
+app.get('/search', function(req, res){
+    request({uri: 'https://maps.googleapis.com/maps/api/place/textsearch/json?query='+req.query["query"]+'&sensor=true&key=' + config.googleApiKey}, function(err, response, body){
+        res.end(body);
+    });   
 });

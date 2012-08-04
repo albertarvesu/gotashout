@@ -40,10 +40,24 @@ Ext.define('Gotashout.view.Form', {
                         label: 'Tell us why'
                     },
                     {
-                        xtype: 'textfield',
+                        xtype: 'autocompletefield',
                         name : 'location',
                         id : 'location',
-                        label: 'Where?'
+                        label: 'Where?',
+                        value: '',
+                        config: {
+                            proxy: {
+                                type: 'ajax',
+                                url: '/search?',
+                                reader: {
+                                    type: 'json',
+                                    rootProperty: 'results'
+                                }
+                            },
+                            resultsHeight: 300,
+                            needleKey: 'query',
+                            labelKey: 'name'
+                        }
                     }
                 ]
             },

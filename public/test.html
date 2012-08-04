@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <link href="/favicon.ico" rel="shortcut icon" />
+    <title>Got a Shout? Let it out!</title>
+    <style type="text/css">
+         /**
+         * Example of an initial loading indicator.
+         * It is recommended to keep this as minimal as possible to provide instant feedback
+         * while other resources are still being loaded for the first time
+         */
+        html, body {
+            height: 100%;
+            background-color: #1985D0
+        }
+
+        #appLoadingIndicator {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            text-align: center;
+            width: 100%;
+            height: 30px;
+            -webkit-animation-name: appLoadingIndicator;
+            -webkit-animation-duration: 0.5s;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-direction: linear;
+        }
+
+        #appLoadingIndicator > * {
+            background-color: #FFFFFF;
+            display: inline-block;
+            height: 30px;
+            -webkit-border-radius: 15px;
+            margin: 0 5px;
+            width: 30px;
+            opacity: 0.8;
+        }
+
+        @-webkit-keyframes appLoadingIndicator{
+            0% {
+                opacity: 0.8
+            }
+            50% {
+                opacity: 0
+            }
+            100% {
+                opacity: 0.8
+            }
+        }
+    </style>
+    <!-- The line below must be kept intact for Sencha Command to build your application -->
+    <script id="microloader" type="text/javascript" src= "sdk/sencha-touch-all.js"></script>
+</head>
+<body>
+    <script id="microloader" type="text/javascript">
+Ext.define("Post", {
+    extend: 'Ext.data.Model',
+    proxy: {
+        type: 'jsonp',
+        url : 'http://maps.googleapis.com/maps/api/geocode/json?address=Hyderabad,+&sensor=false',
+
+        reader: {
+            type: 'json', 
+            root: 'results'
+            //totalProperty: 'totalCount'
+        }
+    },
+
+    fields: [
+        {name: 'id', mapping: 'long_name'},
+        {name: 'title', mapping: 'short_name'},
+        {name: 'topicId', mapping: 'types'} 
+    ]
+});
+
+ds = Ext.create('Ext.data.Store', {
+    pageSize: 10,
+    model: 'Post'
+});
+
+panel = Ext.create('Ext.Panel', {
+    renderTo: Ext.getBody(),
+    title: 'Search the Ext Forums',
+    width: 600,
+    bodyPadding: 10,
+    layout: 'anchor',
+
+    items: [
+    {
+        xtype: 'combo',
+        store: ds,
+        displayField: 'title',
+        typeAhead: false,
+        hideLabel: true,
+        hideTrigger:true,
+        anchor: '100%',
+
+        listConfig: {
+            loadingText: 'Searching...',
+            emptyText: 'No matching posts found.',
+
+            // Custom rendering template for each item
+            getInnerTpl: function() {
+            return '<a class="search-item" href="http://maps.googleapis.com/maps/api/geocode/json?address=Hyderabad,+&sensor=false">' +
+                    '<h3><span>{[Ext.Date.format(values.lastPost, "M j, Y")]}<br />by {author}</span>{title}</h3>' ;
+            }
+        },
+        pageSize: 10
+    }, {
+        xtype: 'component',
+        style: 'margin-top:10px',
+        html: 'Live search requires a minimum of 4 characters.'
+    }]
+});
+    </script>
+</body>
+</html>

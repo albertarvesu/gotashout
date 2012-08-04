@@ -16,6 +16,7 @@ Ext.application({
 
     views: [
         //'GMap',
+        'AutocompleteField',
         'Main',
  
         'Home',
@@ -54,6 +55,8 @@ Ext.application({
 
         // Initialize the main view
         Gotashout.app.facebookAppId = "163130797156175";
+        Gotashout.app.googleApiKey = "AIzaSyCf9LYTWlt75gs2M5SktO2_r746JiNuigE";
+        //https://maps.googleapis.com/maps/api/place/textsearch/json?query=liliw&sensor=true&key=AIzaSyCf9LYTWlt75gs2M5SktO2_r746JiNuigE
         Ext.Viewport.add(Ext.create('Gotashout.view.Main'));
     },
 
