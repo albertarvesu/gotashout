@@ -70,7 +70,7 @@ Ext.define('Gotashout.view.AutocompleteField', {
 				that.isSelectedItem = false;
 				that.resultsStore.load();
 				that.resultsList.setHeight(that.config.config.resultsHeight);
-			}, 300);
+			}, 500);
 		};
 
 		this.resultsList.on('itemtouchend', function() {
@@ -80,7 +80,7 @@ Ext.define('Gotashout.view.AutocompleteField', {
 		this.resultsList.onScroll = function() {};
 
 		this.resultsList.on('itemtap', function(self, index, target, record) {
-			that.setValue(record.get('name'), record.get('id'));
+			that.setValue(record.get('name'), record.get('name'), record);
 			that.isSelectedItem = true;
 
 			blurTimeout = setTimeout(function() {
