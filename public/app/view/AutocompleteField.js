@@ -19,7 +19,7 @@ Ext.define('Gotashout.view.AutocompleteField', {
 	},
 
 	getValue: function(getShownValue) {
-		return (getShownValue || !isSelectedItem ? this.getComponent().getValue() : this.currentSelectedValue);
+		return (getShownValue || !this.isSelectedItem ? this.getComponent().getValue() : this.currentSelectedValue);
 	},
 
 	initialize: function() {
