@@ -66,7 +66,6 @@ Ext.define('Gotashout.view.AutocompleteField', {
 
 			searchTimeout = setTimeout(function() {
 				var uriString = that.config.config.proxy.url + (that.config.config.proxy.url.indexOf('?') ? '&' : '?') + encodeURIComponent(that.config.config.needleKey) + '=' + encodeURIComponent(that.getValue(true));
-				console.log(uriString);
 				that.resultsStore.getProxy().setUrl(uriString);
 				that.isSelectedItem = false;
 				that.resultsStore.load();
